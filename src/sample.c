@@ -388,7 +388,7 @@ struct sample_fetch *find_sample_fetch(const char *kw, int len)
 
 /* This fucntion browse the list of available saple fetch. <current> is
  * the last used sample fetch. If it is the first call, it must set to NULL.
- * <idx> is the index of the next sampleèfetch entry. It is used as private
+ * <idx> is the index of the next sampleï¿½fetch entry. It is used as private
  * value. It is useles to initiate it.
  *
  * It returns always the newt fetch_sample entry, and NULL when the end of
@@ -1117,6 +1117,7 @@ int smp_resolve_args(struct proxy *p)
 		ctx = "sample fetch keyword";
 		switch (cur->ctx) {
 		case ARGC_STK:   where = "in stick rule in"; break;
+                case ARGC_HON:   where = "in hash-on rule in"; break;
 		case ARGC_TRK:   where = "in tracking rule in"; break;
 		case ARGC_LOG:   where = "in log-format string in"; break;
 		case ARGC_LOGSD: where = "in log-format-sd string in"; break;
